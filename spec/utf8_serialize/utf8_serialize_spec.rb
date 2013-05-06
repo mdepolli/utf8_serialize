@@ -15,7 +15,7 @@ describe ActiveRecord::Base do
     Product.destroy_all
     yaml = "--- \n:name: !binary |\n  YWNlIMSBxI3Ekw==\n\n"
     query = "INSERT INTO products (id,info) VALUES (1,'#{yaml}');"
-    ActiveRecord::Base.connection.execute(query);
+    ActiveRecord::Base.connection.execute(query)
 
     name = "ace \xC4\x81\xC4\x8D\xC4\x93"
 
@@ -27,7 +27,7 @@ describe ActiveRecord::Base do
     Product.destroy_all
     yaml = "--- \n:name: !binary |\n  YWNlIMSBxI3Ekw==\n\n"
     query = "INSERT INTO products (id,info) VALUES (1,'#{yaml}');"
-    ActiveRecord::Base.connection.execute(query);
+    ActiveRecord::Base.connection.execute(query)
 
     name = "ace āčē"
 

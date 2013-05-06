@@ -47,3 +47,11 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+## References
+
+* http://blog.rayapps.com/2013/03/11/7-things-that-can-go-wrong-with-ruby-19-string-encodings/
+* http://stackoverflow.com/questions/8558101/rails-encoding-woes-with-serialized-hashes-despite-utf8
+* https://github.com/rails/rails/issues/4657
+* http://stackoverflow.com/questions/1989348/ruby-1-9-yaml-and-string-encodings-how-to-lead-a-life-of-sanity
+* http://stackoverflow.com/questions/10166340/how-do-i-get-yaml-in-ruby-as-of-1-9-3-to-dump-ascii-8bit-strings-as-strings
