@@ -1,5 +1,6 @@
-module ActiveRecord
-  # :stopdoc:
+require 'yaml'
+
+module ActiveRecord # :stopdoc:
   module Coders
     class UTFYAMLColumn < YAMLColumn
       def load(yaml)
