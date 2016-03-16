@@ -7,13 +7,17 @@ module ActiveRecord
     module Serialization
       module ClassMethods
         def utf8_serialize(attr_name, class_name_or_coder = Object)
-          include Behavior
-
-          coder = if [:load, :dump].all? { |x| class_name_or_coder.respond_to?(x) }
+          coder = if class_name_or_coder == ::JSON
+                    Coders::JSON
+                  elsif [:load, :dump].all? { |x| class_name_or_coder.respond_to?(x) }
                     class_name_or_coder
                   else
-                    ActiveRecord::Coders::UTFYAMLColumn.new(class_name_or_coder)
+                    Coders::YAMLColumn.new(class_name_or_coder)
                   end
+
+          decorate_attribute_type(attr_name, :serialize) do |type|
+            Type::Serialized.new(type, coder)
+          end
 
           # merge new serialized attribute and create new hash to ensure that each class in inheritance hierarchy
           # has its own hash of own serialized attributes
